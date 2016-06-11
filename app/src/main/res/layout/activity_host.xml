@@ -1,61 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ch.mall.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.ch.mall.dmall.HostActivity"
     android:orientation="vertical">
-
-   <com.ch.mall.percent.PercentRelativeLayout
-       android:layout_width="0dp"
-       android:layout_height="0dp"
-       app:layout_widthPercent="100%w"
-       app:layout_heightPercent="90%w"
-       android:layout_weight="5"
-       android:id="@+id/rl"
-       ></com.ch.mall.percent.PercentRelativeLayout>
-
-    <com.ch.mall.percent.PercentLinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_widthPercent="100%w"
-        app:layout_heightPercent="10%w"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl"
+        android:layout_weight="5"
+       />
+    <LinearLayout
         android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#fff"
-        >
-      <ImageView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:src="@mipmap/home"
-          android:id="@+id/home" />
-       <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:src="@mipmap/sort"
-           android:layout_weight="1"
-           android:id="@+id/sort" />
-        <ImageView
+        android:background="#fff">
+        <ImageView android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:src="@mipmap/home"/>
+        <ImageView
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/sort"
+            android:layout_weight="1"
+            android:src="@mipmap/sort"/>
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/total"
+            android:layout_weight="1"
             android:src="@mipmap/go"
-            android:layout_weight="1"
-            android:id="@+id/total" />
+            />
         <ImageView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/shop"
+            android:layout_weight="1"
             android:src="@mipmap/shop"
-            android:layout_weight="1"
-            android:id="@+id/shop" />
-
+            />
         <ImageView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/my"
+            android:layout_width="wrap_content"
+            android:id="@+id/my"
             android:layout_weight="1"
-            android:id="@+id/my" />
-    </com.ch.mall.percent.PercentLinearLayout>
+            android:src="@mipmap/my"
+            />
+    </LinearLayout>
 
-</com.ch.mall.percent.PercentLinearLayout>
+
+
+</LinearLayout>
