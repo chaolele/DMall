@@ -1,11 +1,12 @@
 package com.ch.mall.dmall;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.ch.mall.fragment.Home;
 import com.ch.mall.fragment.My;
@@ -27,6 +28,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
     private My fmy;
     private Total ftotal;
     private ImageView total;
+    private long mExitTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
         initview();
        indata();
     }
-
+//設置每個界面
     private void indata() {
 
         fhome = new Home();
@@ -119,5 +121,19 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 my.setImageResource(R.mipmap.my);
                 return;
         }
+    }
+    // 点击两次返回键退出
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                mExitTime = System.currentTimeMillis();
+
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
