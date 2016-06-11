@@ -63,10 +63,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
         shop = (ImageView) findViewById(R.id.shop);
         my = (ImageView) findViewById(R.id.my);
         total = (ImageView) findViewById(R.id.total);
-
-
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -74,7 +71,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 FragmentManager fm1=getSupportFragmentManager();
                 ft = fm1.beginTransaction();
                 ft.show(fhome).hide(fsort).hide(fshop).hide(fmy).hide(ftotal).commit();
-                sort.setImageResource(R.mipmap.shop);
+                sort.setImageResource(R.mipmap.sort);
                 home.setImageResource(R.mipmap.homea);
                 total.setImageResource(R.mipmap.go);
                 shop.setImageResource(R.mipmap.shop);
@@ -84,7 +81,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 FragmentManager fm2=getSupportFragmentManager();
                 ft = fm2.beginTransaction();
                 ft.show(fsort).hide(fhome).hide(fshop).hide(fmy).hide(ftotal).commit();
-                sort.setImageResource(R.mipmap.shopa);
+                sort.setImageResource(R.mipmap.sorta);
                 home.setImageResource(R.mipmap.home);
                 total.setImageResource(R.mipmap.go);
                 shop.setImageResource(R.mipmap.shop);
@@ -94,7 +91,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 FragmentManager fm3=getSupportFragmentManager();
                 ft = fm3.beginTransaction();
                 ft.show(fshop).hide(fhome).hide(fsort).hide(fmy).hide(ftotal).commit();
-                sort.setImageResource(R.mipmap.shop);
+                sort.setImageResource(R.mipmap.sort);
                 home.setImageResource(R.mipmap.home);
                 total.setImageResource(R.mipmap.go);
                 shop.setImageResource(R.mipmap.shopa);
@@ -104,7 +101,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 FragmentManager fm4=getSupportFragmentManager();
                 ft = fm4.beginTransaction();
                 ft.show(fmy).hide(fhome).hide(fsort).hide(fshop).hide(ftotal).commit();
-                sort.setImageResource(R.mipmap.shop);
+                sort.setImageResource(R.mipmap.sort);
                 home.setImageResource(R.mipmap.home);
                 total.setImageResource(R.mipmap.go);
                 shop.setImageResource(R.mipmap.shop);
@@ -114,7 +111,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 FragmentManager fm5=getSupportFragmentManager();
                 ft = fm5.beginTransaction();
                 ft.show(ftotal).hide(fhome).hide(fsort).hide(fshop).hide(fmy).commit();
-                sort.setImageResource(R.mipmap.shop);
+                sort.setImageResource(R.mipmap.sort);
                 home.setImageResource(R.mipmap.home);
                 total.setImageResource(R.mipmap.goa);
                 shop.setImageResource(R.mipmap.shop);
