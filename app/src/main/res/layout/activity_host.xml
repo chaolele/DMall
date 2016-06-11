@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ch.mall.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.ch.mall.dmall.HostActivity"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_weight="4"
+   <com.ch.mall.percent.PercentRelativeLayout
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_widthPercent="100%w"
+       app:layout_heightPercent="90%w"
+       android:layout_weight="5"
        android:id="@+id/rl"
-       ></RelativeLayout>
+       ></com.ch.mall.percent.PercentRelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <com.ch.mall.percent.PercentLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%w"
+        app:layout_heightPercent="10%w"
         android:orientation="horizontal"
-        android:background="#fff"
         android:layout_weight="1"
+        android:background="#fff"
         >
       <ImageView
           android:layout_width="wrap_content"
@@ -52,8 +56,6 @@
             android:src="@mipmap/my"
             android:layout_weight="1"
             android:id="@+id/my" />
+    </com.ch.mall.percent.PercentLinearLayout>
 
-
-    </LinearLayout>
-
-</LinearLayout>
+</com.ch.mall.percent.PercentLinearLayout>
