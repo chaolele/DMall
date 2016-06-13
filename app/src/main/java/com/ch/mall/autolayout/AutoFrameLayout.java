@@ -43,6 +43,8 @@ public class AutoFrameLayout extends FrameLayout
         super(context, attrs, defStyleAttr);
     }
 
+
+
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs)
     {
