@@ -1,13 +1,14 @@
 package com.ch.mall.dmall;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.ch.mall.autolayout.AutoLayoutActivity;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends AutoLayoutActivity {
 
     Handler handler=new Handler(){
         @Override
@@ -23,9 +24,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
         handler.sendEmptyMessageDelayed(1,5);
     }
 }
