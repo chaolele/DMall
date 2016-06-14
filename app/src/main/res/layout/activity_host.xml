@@ -8,47 +8,128 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rl"
-        android:layout_weight="5"
-       />
+        android:layout_weight="8"
+        android:id="@+id/rl" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+
         android:background="#fff">
-        <ImageView android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:id="@+id/home"
-            android:layout_weight="1"
-            android:src="@mipmap/home"/>
-        <ImageView
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/sort"
             android:layout_weight="1"
-            android:src="@mipmap/sort"/>
-        <ImageView
+            android:orientation="vertical"
+            >
+            <ImageView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/home"
+                android:src="@mipmap/home"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="首页"
+                android:id="@+id/name_home"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/total"
             android:layout_weight="1"
-            android:src="@mipmap/go"
-            />
-        <ImageView
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/sort"
+                android:layout_gravity="center"
+                android:src="@mipmap/sort"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:id="@+id/name_sort"
+                />
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           >
+           <ImageView
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/total"
+               android:layout_gravity="center"
+               android:src="@mipmap/go"
+
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="全球精选"
+               android:layout_gravity="center"
+               android:textSize="20sp"
+               android:id="@+id/name_total"
+               />
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/shop"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:src="@mipmap/shop"
-            />
-        <ImageView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/my"
-            android:layout_weight="1"
-            android:src="@mipmap/my"
-            />
+            >
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/shop"
+                android:layout_gravity="center"
+                android:src="@mipmap/shop"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购物车"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:id="@+id/name_shop"
+                />
+
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           >
+           <ImageView
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:id="@+id/my"
+               android:layout_gravity="center"
+               android:src="@mipmap/my"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="我的"
+               android:textSize="20sp"
+               android:layout_gravity="center"
+               android:id="@+id/name_my"
+               />
+
+       </LinearLayout>
+
     </LinearLayout>
 
 
