@@ -18,6 +18,7 @@ import com.ch.mall.fragment.Total;
 
 public class HostActivity extends FragmentActivity implements View.OnClickListener {
 
+
     private ImageView home;
     private ImageView sort;
     private ImageView shop;
@@ -78,6 +79,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+//            首页
             case R.id.home:
                 FragmentManager fm1=getSupportFragmentManager();
                 ft = fm1.beginTransaction();
@@ -93,6 +95,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 shop.setImageResource(R.mipmap.shop);
                 my.setImageResource(R.mipmap.my);
                 return;
+//            分类
             case R.id.sort:
                 FragmentManager fm2=getSupportFragmentManager();
                 ft = fm2.beginTransaction();
@@ -108,6 +111,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 shop.setImageResource(R.mipmap.shop);
                 my.setImageResource(R.mipmap.my);
                 return;
+//            购物车
             case R.id.shop:
                 FragmentManager fm3=getSupportFragmentManager();
                 ft = fm3.beginTransaction();
@@ -123,6 +127,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 shop.setImageResource(R.mipmap.shopa);
                 my.setImageResource(R.mipmap.my);
                 return;
+//            我的
             case R.id.my:
                 FragmentManager fm4=getSupportFragmentManager();
                 ft = fm4.beginTransaction();
@@ -138,6 +143,7 @@ public class HostActivity extends FragmentActivity implements View.OnClickListen
                 shop.setImageResource(R.mipmap.shop);
                 my.setImageResource(R.mipmap.mya);
                 return;
+//            全球精选
             case R.id.total:
                 FragmentManager fm5=getSupportFragmentManager();
                 ft = fm5.beginTransaction();
